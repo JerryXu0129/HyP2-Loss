@@ -12,7 +12,7 @@ We recommend you to follow [] to prepare Flickr-25K and NUS-WIDE images.
 Please run the training command with `--dataset voc2007/voc2012` directly and the voc2007/voc2012 dataset will be downloaded automatically.
 ### Training
 ```
-python retrieval --dataset [dataset] --backbone [backbone] --hash_bit [hash_bit]
+python retrieval.py --dataset [dataset] --backbone [backbone] --hash_bit [hash_bit]
 ```
 Arguments (default value)
 ```
@@ -28,7 +28,7 @@ Other optional arguments
 ### Inference
 Add `--test` after the training command. Make sure there is a corresponding `.ckpt` file in the `./result/` directory.
 ```
-python retrieval --dataset [dataset] --backbone [backbone] --hash_bit [hash_bit] --test
+python retrieval.py --dataset [dataset] --backbone [backbone] --hash_bit [hash_bit] --test
 ```
 ### Performance
 
