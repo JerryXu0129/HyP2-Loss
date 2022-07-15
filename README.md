@@ -7,7 +7,7 @@ Python 3
 ```
 ### Datasets
 ##### Flickr-25K/NUS-WIDE
-We recommend you to follow [] to prepare ImageNet and COCO images.
+We recommend you to follow [] to prepare Flickr-25K and NUS-WIDE images.
 ##### VOC2007/VOC2012
 Please run the training command with `--dataset voc2007/voc2012` directly and the voc2007/voc2012 dataset will be downloaded automatically.
 ### Training
