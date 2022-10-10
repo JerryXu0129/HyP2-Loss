@@ -1,13 +1,17 @@
-# HyP2-Loss
-Official PyTorch implementation of paper HyP$^2$ Loss:Beyond Hypersphere Metric Space for Multi-label Image Retrieval
+# HyP<sup>2</sup>-Loss
+Official PyTorch implementation of paper HyP<sup>2</sup> Loss : Beyond Hypersphere Metric Space for Multi-label Image Retrieval
+### Presentation Video
+Please click [Presentation Video](https://youtu.be/qiZ9r2ox15k)
 ### Requirements
 ```
 NVIDIA GPU + CUDA (may CuDNN) and corresponding PyTorch framework
 Python 3
+numpy
+xlrd
 ```
 ### Datasets
 ##### Flickr-25K/NUS-WIDE
-We recommend you to follow [] to prepare Flickr-25K and NUS-WIDE images.
+Please download the data from the official websites([FLickr](https://press.liacs.nl/mirflickr/), [NUS-WIDE](https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html)) and put the images into folder `./data/flickr25k/mirflickr/`, `./data/nus_wide/images/` respectively.
 ##### VOC2007/VOC2012
 Please run the training command with `--dataset voc2007/voc2012` directly and the voc2007/voc2012 dataset will be downloaded automatically.
 ### Training
@@ -31,17 +35,19 @@ Add `--test` after the training command. Make sure there is a corresponding `.ck
 python retrieval.py --dataset [dataset] --backbone [backbone] --hash_bit [hash_bit] --test
 ```
 ### Performance
+<sup>*</sup>: reported results with the same experiment settings. 
+
+<sup>†</sup>: our reproduced results through the publicly available models. 
+
+Bold font (underlined) values indicate the best (second best).
+
 mAP performance by Hamming Ranking for different hash bits (𝑲 ∈ {12, 24, 36, 48}) in Flickr-25k (mAP@1, 000) and
 NUS-WIDE (mAP@5, 000) with AlexNet. 
-
-<sup>*</sup>: reported results with the same experiment settings. <sup>†</sup>: our reproduced results through the publicly available models. Bold font (underlined) values indicate the best (second best).
 
 <div align=center><img src="imgs/Flickr_Nuswide.png" width="800px"></div>
 
 mAP performance by Hamming Ranking for different hash bits (𝑲 ∈ {16, 32, 48, 64}) in VOC-2007 (mAP@5, 011) and
 VOC-2012 (mAP@5, 717) with GoogLeNet. 
-
-<sup>*</sup>: reported results with the same experiment settings. <sup>†</sup>: our reproduced results through the publicly available models. Bold font (underlined) values indicate the best (second best).
 
 <div align=center><img src="imgs/VOC-2007_2012.png" width="800px"></div>
 
@@ -63,10 +69,10 @@ Performance of different methods in Flickr-25k(top) and NUS-WIDE(bottom) dataset
 ### Citation
 If you use this method or this code in your research, please cite as:
 ```
-@article{xu2022hyp,
+@inproceedings{HyP2loss,
   title={HyP $\^{} 2$ Loss: Beyond Hypersphere Metric Space for Multi-label Image Retrieval},
   author={Xu, Chengyin and Chai, Zenghao and Xu, Zhengzhuo and Yuan, Chun and Fan, Yanbo and Wang, Jue},
-  journal={arXiv preprint arXiv:2208.06866},
-  year={2022}
+  booktitle = {{MM} '22: {ACM} Multimedia Conference},
+  year      = {2022}
 }
 ```

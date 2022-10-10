@@ -5,7 +5,6 @@ import sys
 import argparse
 import torch.nn as nn
 import torch.nn.functional as F
-import json
 import xlrd
 from dataset import *
 from torch.utils import *
